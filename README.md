@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# 🌌 SpaceScope | Advanced Space Intelligence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Explore the universe in real-time.** SpaceScope is a cinematic, full-stack intelligence dashboard for tracking celestial events, satellite impacts, and deep-space missions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Links
+| Service | URL |
+| :--- | :--- |
+| **Frontend** | [https://earth-nova.vercel.app](https://earth-nova.vercel.app) |
+| **Backend API** | [https://earthnova.onrender.com](https://earthnova.onrender.com) |
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features at a Glance
 
-## Expanding the ESLint configuration
+### 📡 Intelligence Monitoring
+*   **Cosmic Weather**: Live solar indices and radiation level tracking.
+*   **Satellite Impact**: Orbiter data visualization with 3D Earth support.
+*   **Global Search**: Unified search across all intelligence data.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📊 Data Visuals
+*   **Analytics Hub**: Professional charts for mission distribution and solar trends.
+*   **Mission Timeline**: Interactive horizontal scroll of NASA & SpaceX missions.
+*   **UI/UX**: Ultra-premium Glassmorphism design with Dark/Light mode support.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ The Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 💻 Frontend
+- **Framework**: `React + Vite`
+- **Visuals**: `Three.js` (React Three Fiber)
+- **Charts**: `Recharts`
+- **Animation**: `Framer Motion`
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### ⚙️ Backend
+- **Server**: `Node.js + Express`
+- **Database**: `Supabase` (PostgreSQL)
+- **Deployment**: `Render`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 How to Run Locally
+
+1.  **Clone the Mission**
+    ```bash
+    git clone https://github.com/ved1006/EarthNova.git
+    cd EarthNova
+    ```
+
+2.  **Start the Engine (Backend)**
+    ```bash
+    cd backend
+    npm install
+    # Set your .env (SUPABASE_URL, SUPABASE_ANON_KEY)
+    npm start
+    ```
+
+3.  **Launch the UI (Frontend)**
+    ```bash
+    cd ../frontend
+    npm install
+    npm run dev
+    ```
+
+---
+
+## 📑 Database Schema
+SpaceScope runs on 4 core intelligence tables:
+1.  `events` - Celestial Event Registry.
+2.  `weather` - Solar/Radiation Monitoring.
+3.  `missions` - Deep Space Timeline.
+4.  `impact` - Orbital Impact Analytics.
+
+---
+
+> [!IMPORTANT]
+> **Note on Cold Starts**: Since the backend is on Render's Free Tier, it may take ~50 seconds to "wake up" on the first request.
+
+**Mission Complete. ☄️**
