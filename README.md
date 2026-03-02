@@ -78,4 +78,3 @@ SpaceScope runs on 4 core intelligence tables:
 > [!IMPORTANT]
 > **Note on Cold Starts**: Since the backend is on Render's Free Tier, it may take ~50 seconds to "wake up" on the first request.
 
-**Mission Complete. ☄️**
